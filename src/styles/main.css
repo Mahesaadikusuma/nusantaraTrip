@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+* {
+  font-family: "Poppins", "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f6f8fd;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Poppins", serif;
+}
+
+p,
+a {
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+  background-color: #fff;
+  padding: 0.5rem;
+}
+.navbar .navbar-brand {
+  color: rgb(64, 64, 64);
+  font-weight: bold;
+}
+.navbar .navbar-toggler {
+  border: 0 !important;
+  height: 44px;
+  cursor: pointer;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-nav .nav-link {
+  color: rgb(163, 163, 163);
+  padding: 0.7rem;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: rgb(38, 38, 38);
+}
+.navbar .navbar-nav .nav-link.active {
+  color: rgb(64, 64, 64);
+  font-weight: bold;
+}
+.navbar .navbar-nav .nav-link.active:hover {
+  color: rgb(38, 38, 38);
+}
+.navbar .btn-login {
+  padding: 10px 30px;
+}
+
+main {
+  margin-top: 0.5rem;
+}
+main .section-details-header {
+  display: block;
+  background-color: #fff;
+  height: 600px;
+}
+main .thubmail {
+  margin-top: -580px;
+  border-radius: 0.5rem;
+}
+main .thubmail figure .thubmailDetail {
+  width: 100%;
+  max-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+main .thubmail .nav-underline li a {
+  color: rgb(64, 64, 64);
+  padding: 0.6rem;
+}
+main .nusantara {
+  margin-top: 30px;
+}
+main .nusantara .nusantara-overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .nusantara .nusantara-overview h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: rgb(64, 64, 64);
+}
+main .nusantara .nusantara-overview p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+main .nusantara .nusantara-overview p img {
+  width: 30px;
+  height: 30px;
+}
+main .nusantara .nusantara-location {
+  margin-top: 20px;
+}
+main .nusantara .nusantara-location img {
+  margin-top: -20px;
+}
+main .nusantara .nusantara-ticket {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+main .nusantara .nusantara-ticket img {
+  margin-top: -20px;
+}
+main .nusantara .nusantara-deskripsi {
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: justify;
+}
+main .nusantara .nusantara-deskripsi h2 {
+  font-weight: bold;
+  color: rgb(64, 64, 64);
+  font-size: 32px;
+}
+main .nusantara .nusantara-deskripsi .nusantara-event h3 {
+  font-weight: bold;
+  color: rgb(64, 64, 64);
+  font-size: 24px;
+}
+main .nusantara .nusantara-deskripsi .nusantara-event .event-list li a {
+  color: rgb(64, 64, 64);
+  text-decoration: none;
+  padding: 1rem;
+  text-align: justify;
+}
+main .nusantara .customerReview .card .card-body .avatar img {
+  width: 70px;
+  height: 70px;
+}
+main .nusantara-add-review {
+  margin-top: 80px;
+  background-color: #fff;
+  padding: 2rem;
+}
+main .nusantara-add-review input {
+  padding: 0.7rem;
+}
+main .nusantara-add-review textarea {
+  resize: none;
+  height: 150px;
+}
+
+#footer {
+  margin-top: 165px;
+  background: #232340;
+}
+#footer .footerd {
+  padding-top: 100px;
+}
+#footer .footerd .email input {
+  width: 120%;
+  border-radius: 4px;
+  background: rgba(245, 245, 245, 0.24);
+  border: 0;
+}
+#footer .footerd .email input::-moz-placeholder {
+  color: #fff;
+}
+#footer .footerd .email input::placeholder {
+  color: #fff;
+}
+#footer .footerd .email .icon-arrow {
+  top: 7px;
+  right: -25px;
+}
+#footer .footerd h5 {
+  color: #5468e7;
+}
+#footer .footerd ul li {
+  margin-top: 12px;
+}
+#footer .footerd ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+#footer .copyright {
+  margin-top: 120px;
+}
+
+@media (max-width: 767.98px) {
+  main .section-details-header {
+    background-color: #fff;
+    height: 500px;
+  }
+  main .thubmail {
+    margin-top: -450px;
+  }
+}
+@media (max-width: 575.98px) {
+  main .section-details-header {
+    display: none;
+  }
+  main .thubmail {
+    margin: 0;
+  }
+}/*# sourceMappingURL=main.css.map */

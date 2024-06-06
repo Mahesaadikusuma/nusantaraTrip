@@ -1,0 +1,41 @@
+// ini jangan di hapus untuk breakpoint dari boostrap
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+// ini jangan di hapus untuk breakpoint dari boostrap
+
+// Penggunaan Breakpoint begini
+// media-breakpoint-up
+@include media-breakpoint-down(md) {
+  main {
+    .section-details-header {
+      background-color: #fff;
+      height: 500px;
+    }
+
+    .thubmail {
+      margin-top: -450px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  body {
+    // background-color: blue;
+  }
+
+  main {
+    .section-details-header {
+      display: none;
+    }
+
+    .thubmail {
+      margin: 0;
+    }
+  }
+}

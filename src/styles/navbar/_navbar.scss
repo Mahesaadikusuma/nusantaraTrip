@@ -1,0 +1,47 @@
+// bisa gunakan file ini untuk navbar cssnya atau bisa di gabung di bagian content
+$black: #7bff00;
+
+.navbar {
+  background-color: #fff;
+  padding: 0.5rem;
+  .navbar-brand {
+    color: rgb(64 64 64);
+    font-weight: bold;
+  }
+
+  .navbar-toggler {
+    border: 0 !important;
+    height: 44px;
+    cursor: pointer;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: rgb(163 163 163);
+      padding: 0.7rem;
+
+      &:hover {
+        color: rgb(38 38 38);
+      }
+
+      &.active {
+        // color: rgb(38 38 38);
+        color: rgb(64 64 64);
+
+        font-weight: bold;
+
+        &:hover {
+          color: rgb(38 38 38);
+        }
+      }
+    }
+  }
+
+  .btn-login {
+    padding: 10px 30px;
+  }
+}
