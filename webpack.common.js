@@ -2,7 +2,27 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const path = require("path");
-const miniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ImageminWebpackPlugin = require("imagemin-webpack-plugin").default;
+const ImageminMozjpeg = require("imagemin-mozjpeg");
+const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
+const { Compilation } = require("webpack");
+
+class MyCustomWebpackPlugin {
+  apply(compiler) {
+    compiler.hooks.compilation.tap("MyCustomWebpackPlugin", (compilation) => {
+      compilation.hooks.processAssets.tap(
+        {
+          name: "MyCustomWebpackPlugin",
+          stage: Compilation.PROCESS_ASSETS_STAGE_ADDITIONS,
+        },
+        (assets) => {
+          // Lakukan modifikasi pada assets di sini jika diperlukan
+        }
+      );
+    });
+  }
+}
 
 module.exports = {
   entry: {
@@ -60,8 +80,21 @@ module.exports = {
         },
       ],
     }),
-    new miniCssExtractPlugin({
+    new MiniCssExtractPlugin({
       filename: "main.css",
     }),
+    new ImageminWebpWebpackPlugin({
+      config: [
+        {
+          test: /\.(jpe?g|png)/,
+          options: {
+            quality: 50,
+            progressive: true,
+          },
+        },
+      ],
+      overrideExtension: true,
+    }),
+    new MyCustomWebpackPlugin(), // Plugin khusus untuk menangani perubahan aset
   ],
 };

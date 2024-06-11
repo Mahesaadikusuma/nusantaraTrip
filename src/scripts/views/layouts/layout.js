@@ -1,1 +1,0 @@
-import "../component/Navbar.js";

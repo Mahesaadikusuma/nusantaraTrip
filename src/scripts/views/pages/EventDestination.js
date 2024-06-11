@@ -1,23 +1,24 @@
 import NusantaraDB from "../../data/nusantaraDB";
 import UrlParser from "../../routes/url-parser";
 import DetailContainer from "../component/DetailContainer";
+import EventContainer from "../component/EventContainer";
 import LoaderCoontainer from "../component/atom/loader";
 
-const Detail = {
+const EventDestination = {
   async render() {
     return `
       <div id="loader">
           
       </div>
       <div id="detail">
-      
+        dasdas
       </div>
     `;
   },
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const APIDetail = await NusantaraDB.NusantaraDetail(url.id);
+    const APIDetail = await NusantaraDB.EventDestinations(url.id);
 
     console.log(APIDetail);
     const detailContainer = document.querySelector("#detail");
@@ -28,27 +29,26 @@ const Detail = {
     setTimeout(() => {
       try {
         loader.style.display = "none";
-        detailContainer.innerHTML = DetailContainer(APIDetail);
+        detailContainer.innerHTML = EventContainer(APIDetail);
         const form = document.querySelector("#form");
         const name = document.querySelector("#name");
         const comment = document.querySelector("#comment");
         const ratting = document.querySelector("#ratting");
+        console.log(ratting);
 
         form.addEventListener("submit", async (event) => {
           event.preventDefault();
 
-          // Reset error messages
-
           const data = {
-            id_destinations: APIDetail.id,
+            id_event_destinations: APIDetail.id,
             name: name.value,
-            rating_destination: ratting.value ?? null,
-            comment_destination: comment.value,
+            rating_event_destination: ratting.value ?? null,
+            comment_event_destination: comment.value,
           };
-
+          // console.log(data);
           await NusantaraDB.ReviewDestinations(data);
-          const updateAPI = await NusantaraDB.NusantaraDetail(url.id);
-          detailContainer.innerHTML = DetailContainer(updateAPI);
+          const updateAPI = await NusantaraDB.EventDestinations(url.id);
+          detailContainer.innerHTML = EventContainer(updateAPI);
         });
       } catch (error) {
         console.log(error);
@@ -57,4 +57,4 @@ const Detail = {
   },
 };
 
-export default Detail;
+export default EventDestination;

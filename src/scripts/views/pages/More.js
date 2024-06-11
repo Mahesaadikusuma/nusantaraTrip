@@ -1,31 +1,31 @@
 import NusantaraDB from "../../data/nusantaraDB";
-import ArticleContainer from "../component/Article";
+import Destinations from "../component/Destinations";
 import LoaderCoontainer from "../component/atom/loader";
 
-const Article = {
+const More = {
   async render() {
     return `
       <div id="loader"></div>
-      <div id="article"></div>
+      <div id="destinations"></div>
     `;
   },
 
   async afterRender() {
+    const data = await NusantaraDB.NusantaraDestinations();
     const loader = document.getElementById("loader");
-    const articleID = document.getElementById("article");
+    const destination = document.getElementById("destinations");
 
-    const ArticleAPI = await NusantaraDB.Article();
     loader.innerHTML = LoaderCoontainer();
 
     setTimeout(() => {
       try {
         loader.style.display = "none";
-        articleID.innerHTML = ArticleContainer(ArticleAPI);
+        destination.innerHTML = Destinations(data);
       } catch (error) {
         console.log(error);
       }
-    }, 300);
+    }, 500);
   },
 };
 
-export default Article;
+export default More;

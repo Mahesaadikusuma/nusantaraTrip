@@ -70,7 +70,7 @@ main {
       }
     }
 
-    .nusantara-deskripsi {
+    .nusantara-deskripsi-detail {
       margin-top: 20px;
       background-color: #fff;
       border-radius: 10px;
@@ -172,3 +172,196 @@ main {
 }
 
 // Halaman Detail
+
+// Halaman Home
+main {
+  display: block;
+
+  margin-top: 0.5rem;
+  .carousel {
+    .carousel-item {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .carousel-inner {
+      .carousel-item {
+        figure {
+          .gd {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+    h5 {
+      padding-right: 500px;
+      margin-top: 50px;
+    }
+    p {
+      padding-right: 500px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .card-popular {
+    .card {
+      .container {
+        align-items: center;
+        justify-items: center;
+        margin-top: 15px;
+        margin-bottom: 2px;
+      }
+      .card-img-top {
+        width: 100%;
+        border-radius: 0.5rem;
+      }
+      .card-body {
+        .container-upper-card {
+          .container-txt {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .card-title {
+              font-size: 18px;
+            }
+
+            .container-img {
+              .img {
+                width: 44px;
+                height: 44px;
+              }
+            }
+          }
+          .card-title-ex {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .card-other-destination {
+    .card {
+      .container {
+        align-items: center;
+        justify-items: center;
+        margin-top: 15px;
+        margin-bottom: 2px;
+      }
+      .img {
+        width: 100%;
+        border-radius: 25px;
+      }
+      .card-body {
+        .container-upper-card {
+          .container-img {
+          }
+        }
+      }
+    }
+  }
+
+  .container-b {
+    display: flex;
+    margin-top: 18px;
+    justify-content: center;
+    align-items: center;
+
+    .button {
+      justify-content: center;
+      align-items: center;
+      display: block;
+      width: 44px;
+      height: 44px;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      line-height: 25px;
+    }
+  }
+
+  .thumbnail {
+    margin-top: 0.5rem;
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 80px;
+      align-items: center;
+      justify-items: center;
+      figure {
+        .article {
+          width: 100%;
+          max-height: 300px;
+          object-fit: cover;
+          border-radius: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .nusantara-location {
+    margin-top: 20px;
+    img {
+      margin-top: -20px;
+    }
+  }
+
+  .nusantara-ticket {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    img {
+      margin-top: -20px;
+    }
+  }
+
+  .article {
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .card {
+      border: none;
+      overflow: hidden;
+      border-radius: 0.75rem;
+
+      .card-img-overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 1rem;
+        h5,
+        p {
+          /* Font minimum, preferred and maximum value */
+          font-size: clamp(var(--min), var(--val), var(--max));
+        }
+        h5 {
+          --min: 0.1rem;
+          --val: 1rem;
+          --max: 2rem;
+          font-weight: bold;
+        }
+
+        p {
+          --min: 0.1rem;
+          --val: 0.5rem;
+          --max: 1rem;
+        }
+      }
+    }
+  }
+}
+// Halaman Home
