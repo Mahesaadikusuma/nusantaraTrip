@@ -24,7 +24,9 @@ const EventContainer = (EventDestination) => {
         <div class="thubmail">
           <figure>
             <img
-              src="${CONFIG.BASE_IMAGE_URL}/${EventDestination.image_event}"
+              src="${CONFIG.BASE_IMAGE_URL}/${
+    EventDestination.destination.thubmnail
+  }"
               class="img-fluid thubmailDetail" />
           </figure>
 
@@ -80,7 +82,17 @@ const EventContainer = (EventDestination) => {
 
           <div class="nusantara-deskripsi-detail" id="overview">
             <h2>Overview</h2>
-            <p>${EventDestination.description_event_destination}</p>
+            <div>
+              <div class="d-flex align-items-center my-3">
+                <img src="${CONFIG.BASE_IMAGE_URL}/${
+    EventDestination.destination.thubmnail
+  }" class="img-fluid w-25 rounded" />
+                
+              </div>
+            </div>
+            <p class="my-5">${
+              EventDestination.description_event_destination
+            }</p>
 
             
           </div>

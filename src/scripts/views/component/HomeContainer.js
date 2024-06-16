@@ -38,7 +38,7 @@ const HomeContainer = (destinations, dataArticle) => {
                 <figure>
                   <img
                     src="/images/hero.webp"
-                    class="img-fluid article" />
+                    class="img-fluid article" alt="hero image" />
                 </figure>
               </aside>
             </div>

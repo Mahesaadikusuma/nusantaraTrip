@@ -42,7 +42,7 @@ const cardPopuler = (destination) => {
 
         </div>
         <p class="card-text fs-6">
-          ${destination.description.substring(0, limitCharacter)}
+          ${destination.description.substring(0, limitCharacter) + "..."}
         </p>
       </div>
     </div>

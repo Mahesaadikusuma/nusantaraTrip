@@ -19,8 +19,8 @@ const ArticleDetail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const APIDetail = await NusantaraDB.ArticleDetail(url.id);
-    console.log(APIDetail);
-    console.log(url.id);
+    // console.log(APIDetail);
+    // console.log(url.id);
     const detailContainer = document.querySelector("#detail");
     const loader = document.querySelector("#loader");
 
@@ -35,7 +35,7 @@ const ArticleDetail = {
         const comment = document.querySelector("#comment");
 
         const ratting = document.querySelector("#ratting");
-        console.log(form);
+        // console.log(form);
         form.addEventListener("submit", async (event) => {
           event.preventDefault();
           const data = {

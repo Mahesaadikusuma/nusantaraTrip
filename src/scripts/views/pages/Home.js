@@ -16,7 +16,7 @@ const Home = {
   async afterRender() {
     const data = await NusantaraDB.NusantaraDestinations();
     const dataArticle = await NusantaraDB.Article();
-
+    console.log(data);
     const homeContainer = document.querySelector("#home");
     const loader = document.querySelector("#loader");
     loader.innerHTML = LoaderCoontainer();
