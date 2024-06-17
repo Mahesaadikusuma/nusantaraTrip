@@ -68,8 +68,7 @@ Ubah Environment variabel
 
 - API_URL : untuk Web Aplikasi Online
 - APP_DEV : Local server Laravel
-
-- `https://documenter.getpostman.com/view/23896501/2sA3Qv9X19`
+- [Dokumentasi Nusantara Trip Postman](https://documenter.getpostman.com/view/23896501/2sA3Qv9X19).
 
 Di File Config.js ubah URL :
 Web Aplikasi Online : Batas Hosting 07/07/2024
@@ -82,4 +81,4 @@ Aplikasi Back End Laravel Local
 - `http://127.0.0.1:8000/api` URL untuk API laravel
 - `http://127.0.0.1:8000/storage` URL untuk API laravel
 
-Github Nusantara Back End `https://github.com/Mahesaadikusuma/Nusantara-laravel`
+[Github Nusantara Back End](https://github.com/Mahesaadikusuma/Nusantara-laravel)
