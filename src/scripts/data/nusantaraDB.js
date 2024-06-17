@@ -10,7 +10,7 @@ class NusantaraDB {
     // return responseJson.data.destinations;
     try {
       const response = await axios.get(API_ENDPOINT.destinations);
-      console.log(response.data);
+      // console.log(response.data);
       return response.data.result;
     } catch (error) {
       console.error(error);

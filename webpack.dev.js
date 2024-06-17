@@ -8,7 +8,7 @@ module.exports = merge(common, {
   devServer: {
     static: path.resolve(__dirname, "dist"),
     open: true,
-    port: 9100,
+    port: 9101,
     client: {
       overlay: {
         errors: true,
@@ -16,5 +16,7 @@ module.exports = merge(common, {
       },
     },
     compress: true,
+    // hot: true, // Menambahkan Hot Module Replacement
+    // liveReload: false, // Menonaktifkan live reload otomatis
   },
 });

@@ -19,7 +19,7 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const APIDetail = await NusantaraDB.NusantaraDetail(url.id);
 
-    console.log(APIDetail);
+    // console.log(APIDetail);
     const detailContainer = document.querySelector("#detail");
     const loader = document.querySelector("#loader");
 
@@ -34,22 +34,27 @@ const Detail = {
         const comment = document.querySelector("#comment");
         const ratting = document.querySelector("#ratting");
 
-        form.addEventListener("submit", async (event) => {
-          event.preventDefault();
+        if (navigator.onLine) {
+          form.addEventListener("submit", async (event) => {
+            event.preventDefault();
 
-          // Reset error messages
+            // Reset error messages
 
-          const data = {
-            id_destinations: APIDetail.id,
-            name: name.value,
-            rating_destination: ratting.value ?? null,
-            comment_destination: comment.value,
-          };
+            const data = {
+              id_destinations: APIDetail.id,
+              name: name.value,
+              rating_destination: ratting.value ?? null,
+              comment_destination: comment.value,
+            };
 
-          await NusantaraDB.ReviewDestinations(data);
-          const updateAPI = await NusantaraDB.NusantaraDetail(url.id);
-          detailContainer.innerHTML = DetailContainer(updateAPI);
-        });
+            await NusantaraDB.ReviewDestinations(data);
+            const updateAPI = await NusantaraDB.NusantaraDetail(url.id);
+            detailContainer.innerHTML = DetailContainer(updateAPI);
+          });
+        } else {
+          alert("Tidak ada koneksi internet add review tidak bisa dilakukan");
+          console.log("offline");
+        }
       } catch (error) {
         console.log(error);
       }

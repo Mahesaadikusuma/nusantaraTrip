@@ -36,20 +36,25 @@ const ArticleDetail = {
 
         const ratting = document.querySelector("#ratting");
         // console.log(form);
-        form.addEventListener("submit", async (event) => {
-          event.preventDefault();
-          const data = {
-            id_artikel_destinations: APIDetail.id,
-            name: name.value,
-            rating_artikel_destination: ratting.value ?? null,
-            comment_artikel_destination: comment.value,
-          };
+        if (navigator.onLine) {
+          form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const data = {
+              id_artikel_destinations: APIDetail.id,
+              name: name.value,
+              rating_artikel_destination: ratting.value ?? null,
+              comment_artikel_destination: comment.value,
+            };
 
-          await NusantaraDB.ReviewDestinations(data);
-          // console.log(comment);
-          const updateAPI = await NusantaraDB.ArticleDetail(url.id);
-          detailContainer.innerHTML = ArticleDetailContainer(updateAPI);
-        });
+            await NusantaraDB.ReviewDestinations(data);
+            // console.log(comment);
+            const updateAPI = await NusantaraDB.ArticleDetail(url.id);
+            detailContainer.innerHTML = ArticleDetailContainer(updateAPI);
+          });
+        } else {
+          alert("Tidak ada koneksi internet add review tidak bisa dilakukan");
+          console.log("offline");
+        }
       } catch (error) {
         console.log(error);
       }
