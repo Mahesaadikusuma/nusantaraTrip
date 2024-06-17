@@ -1,6 +1,6 @@
 # Nusantara Trip
 
-[![image.png](https://raw.githubusercontent.com/Mahesaadikusuma/main/nusantaraTrip/image.png)]
+[![image.png](https://raw.githubusercontent.com/Mahesaadikusuma/nusantaraTrip/main/image.png)]
 
 ## Dicoding SIB Cyle 6 Front End & Back End
 
@@ -18,7 +18,7 @@ Proyek yang hendak kami kerjakan adalah sebuah aplikasi sistem informasi pariwis
 - menampilkan event detail dari Destinations
 - membuat feature untuk Add review di destination, event destination, dan Article
 
-## Installation Web Aplikasi
+## Installation Web Aplikasi Nusantara Trip
 
 1. Clone the repository:
 
