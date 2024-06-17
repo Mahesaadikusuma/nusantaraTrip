@@ -46,10 +46,14 @@ const EventDestination = {
               rating_event_destination: ratting.value ?? null,
               comment_event_destination: comment.value,
             };
-            // console.log(data);
-            await NusantaraDB.ReviewDestinations(data);
-            const updateAPI = await NusantaraDB.EventDestinations(url.id);
-            detailContainer.innerHTML = EventContainer(updateAPI);
+
+            try {
+              await NusantaraDB.ReviewDestinations(data);
+              const updateAPI = await NusantaraDB.EventDestinations(url.id);
+              detailContainer.innerHTML = EventContainer(updateAPI);
+            } catch (error) {
+              console.log(error);
+            }
           });
         } else {
           alert("Tidak ada koneksi internet add review tidak bisa dilakukan");

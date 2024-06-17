@@ -46,10 +46,13 @@ const ArticleDetail = {
               comment_artikel_destination: comment.value,
             };
 
-            await NusantaraDB.ReviewDestinations(data);
-            // console.log(comment);
-            const updateAPI = await NusantaraDB.ArticleDetail(url.id);
-            detailContainer.innerHTML = ArticleDetailContainer(updateAPI);
+            try {
+              await NusantaraDB.ReviewDestinations(data);
+              const updateAPI = await NusantaraDB.ArticleDetail(url.id);
+              detailContainer.innerHTML = ArticleDetailContainer(updateAPI);
+            } catch (error) {
+              console.log(error);
+            }
           });
         } else {
           alert("Tidak ada koneksi internet add review tidak bisa dilakukan");
