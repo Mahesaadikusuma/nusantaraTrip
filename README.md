@@ -1,6 +1,6 @@
 # Nusantara Trip
 
-[![image.png](https://raw.githubusercontent.com/Mahesaadikusuma/nusantaraTrip/main/image.png)]
+![image.png](https://raw.githubusercontent.com/Mahesaadikusuma/nusantaraTrip/main/image.png)
 
 ## Dicoding SIB Cyle 6 Front End & Back End
 
@@ -11,6 +11,17 @@ Proyek yang hendak kami kerjakan adalah sebuah aplikasi sistem informasi pariwis
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Teams](#Teams)
+
+## Teams
+
+- Mahesa Adi Kusuma
+- Acxell Rizada Sudigto
+- Devina Ayu Septariza
+
+## Tema
+
+Tema Nusantara Trip untuk Capstone Project Dicoding Cyle 6 : Sosial, Budaya, Pariwisata dan lingkungan yang berkelanjutan
 
 ## Features
 
