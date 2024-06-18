@@ -31,7 +31,7 @@ const Carousel = (destination) => {
                 </figure>
                 <div class="carousel-caption d-none d-md-block">
                 <h5>${destination.name}</h5>
-                <p>Malang, Indonesia</p>
+                <p>${destination.location}, Indonesia</p>
                 </div>
             </div>`;
             })};
