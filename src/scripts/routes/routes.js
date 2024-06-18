@@ -1,3 +1,4 @@
+import About from "../views/pages/About";
 import Article from "../views/pages/Article";
 import ArticleDetail from "../views/pages/ArticleDetail";
 import Detail from "../views/pages/Detail";
@@ -12,6 +13,7 @@ const routes = {
   "/detail/:id": Detail,
   "/destinations": More,
   "/event-destination/:id": EventDestination,
+  "/about": About,
 };
 
 export default routes;
