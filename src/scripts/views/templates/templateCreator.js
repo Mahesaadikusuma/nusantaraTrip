@@ -99,12 +99,12 @@ const cardDestinations = (destination) => {
 
 const CardArticle = (article) => {
   return `
-    <div class="col-12 col-md-6 col-lg-3">
-      <a href="/#/article/${article.slug}">
-        <div class="card text-white ">
+    <div class="col-12 col-md-6 col-lg-3 ">
+      <a href="/#/article/${article.slug}" >
+        <div class="card text-white h-100 ">
           <img
             src="${CONFIG.BASE_IMAGE_URL}/${article.image}"
-            class="card-img"
+            class="card-img h-100"
             alt="${article.judul_article}" />
           <div class="card-img-overlay">
             <h5 class="card-title">
