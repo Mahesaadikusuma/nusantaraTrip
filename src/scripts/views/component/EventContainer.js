@@ -77,7 +77,7 @@ const EventContainer = (EventDestination) => {
 
           <div class="nusantara-ticket">
             <img src="images/Calendar.svg" alt="" />
-            <p>IDR. ${formatDate(EventDestination.date_event)}</p>
+            <p>${formatDate(EventDestination.date_event)}</p>
           </div>
 
           <div class="nusantara-deskripsi-detail" id="overview">
@@ -85,7 +85,7 @@ const EventContainer = (EventDestination) => {
             <div>
               <div class="d-flex align-items-center my-3">
                 <img src="${CONFIG.BASE_IMAGE_URL}/${
-    EventDestination.destination.thubmnail
+    EventDestination.image_event
   }" class="img-fluid w-25 rounded" />
                 
               </div>

@@ -20,7 +20,7 @@ const EventDestination = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const APIDetail = await NusantaraDB.EventDestinations(url.id);
 
-    console.log(APIDetail);
+    // console.log(APIDetail);
     const detailContainer = document.querySelector("#detail");
     const loader = document.querySelector("#loader");
 
@@ -34,7 +34,7 @@ const EventDestination = {
         const name = document.querySelector("#name");
         const comment = document.querySelector("#comment");
         const ratting = document.querySelector("#ratting");
-        console.log(ratting);
+        // console.log(ratting);
 
         if (navigator.onLine) {
           form.addEventListener("submit", async (event) => {

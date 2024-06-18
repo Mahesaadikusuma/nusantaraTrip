@@ -70,6 +70,7 @@ class NusantaraDB {
   static async EventDestinations(slug) {
     try {
       const response = await axios.get(API_ENDPOINT.EVENT_DESTINATIONS(slug));
+      // console.log(response);
       return response.data.result;
     } catch (error) {
       console.log(error);
