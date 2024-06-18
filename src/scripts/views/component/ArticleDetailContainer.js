@@ -13,7 +13,7 @@ const ArticleDetailContainer = (article) => {
     return new Date(dateString).toLocaleDateString("id-ID", options);
   };
 
-  return `s
+  return `
     <section class="section-details-header"></section>
 
       <div class="container">

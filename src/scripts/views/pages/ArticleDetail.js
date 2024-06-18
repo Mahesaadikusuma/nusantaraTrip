@@ -11,7 +11,7 @@ const ArticleDetail = {
           
       </div>
       <div id="detail">
-        asdsa
+        
       </div>
     `;
   },
