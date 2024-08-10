@@ -23,7 +23,7 @@ const HomeContainer = (destinations, dataArticle) => {
               <h1 class="fw-bold">
                 Nusantara Trip Exploring the Boundless Beauty of Indonesia
               </h1>
-              <p class="mt-5"> 
+              <p class="mt-5">
                 Join Nusantara Trip to explore the best tourism events across
                 the Indonesian archipelago. From cultural festivals in Bali to
                 traditional art performances in Yogyakarta, Nusantara Trip
@@ -53,7 +53,7 @@ const HomeContainer = (destinations, dataArticle) => {
         </p>
         <div class="card-popular">
           <div class="row row-cols-1 row-cols-md-3 g-4">
-            
+
             ${destinations
               .slice(0, 4)
               .map((destination) => cardPopuler(destination))
@@ -90,7 +90,7 @@ const HomeContainer = (destinations, dataArticle) => {
               .slice(0, 4)
               .map((article) => CardArticle(article))
               .join(``)}
-            
+
           </div>
         </div>
       </div>

@@ -9,19 +9,19 @@ const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const { Compilation } = require("webpack");
 
 class MyCustomWebpackPlugin {
-  apply(compiler) {
-    compiler.hooks.compilation.tap("MyCustomWebpackPlugin", (compilation) => {
-      compilation.hooks.processAssets.tap(
-        {
-          name: "MyCustomWebpackPlugin",
-          stage: Compilation.PROCESS_ASSETS_STAGE_ADDITIONS,
-        },
-        (assets) => {
-          // Lakukan modifikasi pada assets di sini jika diperlukan
-        }
-      );
-    });
-  }
+  // apply(compiler) {
+  //   compiler.hooks.compilation.tap("MyCustomWebpackPlugin", (compilation) => {
+  //     compilation.hooks.processAssets.tap(
+  //       {
+  //         name: "MyCustomWebpackPlugin",
+  //         stage: Compilation.PROCESS_ASSETS_STAGE_ADDITIONS,
+  //       },
+  //       (assets) => {
+  //         // Lakukan modifikasi pada assets di sini jika diperlukan
+  //       }
+  //     );
+  //   });
+  // }
 }
 
 module.exports = {
@@ -80,9 +80,11 @@ module.exports = {
         },
       ],
     }),
+
     new MiniCssExtractPlugin({
       filename: "main.css",
     }),
+
     new ImageminWebpWebpackPlugin({
       config: [
         {
@@ -95,6 +97,6 @@ module.exports = {
       ],
       overrideExtension: true,
     }),
-    new MyCustomWebpackPlugin(), // Plugin khusus untuk menangani perubahan aset
+    // new MyCustomWebpackPlugin(), // Plugin khusus untuk menangani perubahan aset
   ],
 };
