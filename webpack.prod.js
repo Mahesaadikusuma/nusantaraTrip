@@ -27,7 +27,7 @@ module.exports = merge(common, {
       runtimeCaching: [
         {
           urlPattern: ({ url }) =>
-            url.href.startsWith("https://furniluxe.shop/api"),
+            url.href.startsWith("https://nusantaratrip.site/api"),
           handler: "StaleWhileRevalidate",
           options: {
             cacheName: "nusantara-trip-api",
@@ -35,7 +35,7 @@ module.exports = merge(common, {
         },
         {
           urlPattern: ({ url }) =>
-            url.href.startsWith("https://furniluxe.shop/storage"),
+            url.href.startsWith("https://nusantaratrip.site/storage"),
           handler: "StaleWhileRevalidate",
           options: {
             cacheName: "nusantara-trip-image-api",

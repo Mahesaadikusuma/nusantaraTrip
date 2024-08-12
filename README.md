@@ -73,8 +73,8 @@ Ubah Environment variabel
 Di File Config.js ubah URL :
 Web Aplikasi Online : Batas Hosting 07/07/2024
 
-- `https://furniluxe.shop/api` URL untuk API Web Aplikasi Online
-- `https://furniluxe.shop/storage` URL untuk image laravel
+- `https://nusantaratrip.site/api` URL untuk API Web Aplikasi Online
+- `https://nusantaratrip.site/storage` URL untuk image laravel
 
 Aplikasi Back End Laravel Local
 
